@@ -2,13 +2,13 @@
 
 .app {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.6rem;
     color:darkturquoise;
 }
 
 .wrapper {
     max-width: 1140px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .wrapper:hover .memes__title {
@@ -24,7 +24,7 @@ input[type="radio"]:checked~ .memes__preview .memes__title{
 }
 
 .app__title {
-    font-size: 3rem;
+    font-size: 3.8rem;
     padding-top: 3rem;
     font-weight:bold;
 }
@@ -42,15 +42,6 @@ input[type="radio"]:checked~ .memes__preview .memes__title{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.memes__item:hover .memes__image {
-    display: block;
-}
-
-.memes__item:hover .memes__image img{
-    width: 400px;
-    border: 1px solid;
 }
 
 .memes__item:hover .fa-xmark {
@@ -72,8 +63,8 @@ input[type="radio"]:checked~ .memes__preview .memes__title{
 }
 
 .memes__title {
-    font-size: 2.4rem;
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    font-size: 3.4rem;
+    padding: 1.5rem 1.5rem 0.2rem 1.5rem;
     font-weight: bold;
 }
 
@@ -91,10 +82,14 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked ~ .memes__image img{
-    width: 400px;
+.memes__item:hover .memes__image img{
+    width: 600px;
     border: 1px solid;
+}
 
+input[type="radio"]:checked ~ .memes__image img{
+    width: 600px;
+    border: 1px solid;
 }
 
 .wrapper:hover input[type="radio"]:checked~ .memes__preview .fa-xmark {
@@ -104,3 +99,46 @@ input[type="radio"]:checked ~ .memes__image img{
 input[type="radio"]:checked~ .memes__preview .fa-plus {
     display: none;
 }
+
+@media (max-width: 820px) {
+
+    .app__title {
+        font-size: 3.4rem;
+    }
+
+    .memes__title {
+        font-size: 3rem;
+    }
+
+    input[type="radio"]:checked ~ .memes__image img{
+        width: 280px;
+        border: 1px solid;
+    }
+
+    .underline {
+        margin: 1.5rem 0;
+        border-top: 1px solid grey;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .app__title {
+        font-size: 1.8rem;
+    }
+
+    .memes__title {
+        font-size: 1.2rem;
+    }
+
+    input[type="radio"]:checked ~ .memes__image img{
+        width: 220px;
+        border: 1px solid;
+    }
+
+    .underline {
+        margin: .5rem 0;
+        border-top: 1px solid grey;
+    }
+}
+

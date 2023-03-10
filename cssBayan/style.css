@@ -1,1 +1,61 @@
 @import url("reset.css");
+
+.app {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    background-color:honeydew;
+}
+
+.wrapper:hover .fa-plus {
+    display: block;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.app__title {
+    font-size: 3rem;
+    padding-top: 3rem;
+    font-weight:bold;
+}
+
+.underline {
+    margin: 3rem 0;
+    border-top: 1px solid grey;
+}
+
+.memes__item {
+    cursor: pointer;
+}
+
+.memes__preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-xmark {
+    display: none;
+}
+
+.fa-plus {
+    display: none;
+}
+
+.memes__title {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+}
+
+.memes__image {
+    text-align: center;
+    display: none;
+}
+
+.memes__image img {
+    border: 1px solid;
+    width: 400px;
+    background-color:darkgray;
+}

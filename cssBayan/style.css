@@ -3,16 +3,24 @@
 .app {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.6rem;
-    background-color:honeydew;
-}
-
-.wrapper:hover .fa-plus {
-    display: block;
+    color:darkturquoise;
 }
 
 .wrapper {
     max-width: 1140px;
     margin: 0 auto;
+}
+
+.wrapper:hover .memes__title {
+    color:black;
+}
+
+input[type="radio"]:checked~ .memes__preview .memes__title{
+    color: black
+}
+
+.wrapper:hover .fa-plus {
+    display: block;
 }
 
 .app__title {
@@ -36,38 +44,58 @@
     align-items: center;
 }
 
-.fa-xmark {
+.memes__item:hover .memes__image {
+    display: block;
+}
+
+.memes__item:hover .memes__image img{
+    width: 400px;
+    border: 1px solid;
+}
+
+.memes__item:hover .fa-xmark {
+    display: block;
+}
+
+.memes__item:hover .fa-plus {
     display: none;
 }
 
+.fa-xmark {
+    display: none;
+    color:black;
+}
+
 .fa-plus {
+    color:black;
     display: none;
 }
 
 .memes__title {
     font-size: 2.4rem;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    font-weight: bold;
 }
 
 .memes__image {
     text-align: center;
-    display: none;
 }
 
 .memes__image img {
-    border: 1px solid;
-    width: 400px;
+    width: 0px;
     background-color:darkgray;
+    transition: .5s;
 }
 
 input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked ~ .memes__image {
-    display: block;
-}
+input[type="radio"]:checked ~ .memes__image img{
+    width: 400px;
+    border: 1px solid;
 
+}
 
 .wrapper:hover input[type="radio"]:checked~ .memes__preview .fa-xmark {
     display: block;
